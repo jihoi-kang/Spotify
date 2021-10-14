@@ -25,6 +25,7 @@
 		E2C7133C271014B800B71518 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7133B271014B800B71518 /* Artist.swift */; };
 		E2C7133E271014BE00B71518 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7133D271014BE00B71518 /* UserProfile.swift */; };
 		E2C713402710214C00B71518 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7133F2710214B00B71518 /* Extensions.swift */; };
+		E2C713422717C45300B71518 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C713412717C45300B71518 /* AuthResponse.swift */; };
 		E2E15591271010B800DC0AAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E15590271010B800DC0AAD /* AppDelegate.swift */; };
 		E2E15593271010B800DC0AAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E15592271010B800DC0AAD /* SceneDelegate.swift */; };
 		E2E15595271010B800DC0AAD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E15594271010B800DC0AAD /* HomeViewController.swift */; };
@@ -51,6 +52,7 @@
 		E2C7133B271014B800B71518 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		E2C7133D271014BE00B71518 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		E2C7133F2710214B00B71518 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E2C713412717C45300B71518 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		E2E1558D271010B800DC0AAD /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E15590271010B800DC0AAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E15592271010B800DC0AAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				E2C71339271014A700B71518 /* AudioTrack.swift */,
 				E2C7133B271014B800B71518 /* Artist.swift */,
 				E2C7133D271014BE00B71518 /* UserProfile.swift */,
+				E2C713412717C45300B71518 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				E2C7132A2710142000B71518 /* ProfileViewController.swift in Sources */,
 				E2C7131C2710138100B71518 /* TabBarViewController.swift in Sources */,
 				E2C713362710148400B71518 /* HapticsManager.swift in Sources */,
+				E2C713422717C45300B71518 /* AuthResponse.swift in Sources */,
 				E2C7133A271014A700B71518 /* AudioTrack.swift in Sources */,
 				E2E15595271010B800DC0AAD /* HomeViewController.swift in Sources */,
 				E2C713242710140100B71518 /* AuthViewController.swift in Sources */,
