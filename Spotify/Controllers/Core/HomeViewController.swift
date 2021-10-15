@@ -17,6 +17,11 @@ class HomeViewController: UIViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(didTapSettings))
+        fetchData()
+    }
+    
+    private func fetchData() {
+        // contents
     }
     
     @objc func didTapSettings() {
