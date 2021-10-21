@@ -9,7 +9,6 @@ import SDWebImage
 import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.isHidden = true
@@ -17,9 +16,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                            forCellReuseIdentifier: "cell")
         return tableView
     }()
-    
+
     private var models = [String]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Profile"
@@ -29,26 +28,26 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         fetchProfile()
         view.backgroundColor = .systemBackground
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
     }
-    
+
     private func fetchProfile() {
         ApiCaller.shared.getCurrentUserProfile { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let model):
+                case let .success(model):
                     self?.updateUi(with: model)
-                case .failure(let error):
+                case let .failure(error):
                     print(error.localizedDescription)
                     self?.failedToGetProfile()
                 }
             }
         }
     }
-    
+
     private func updateUi(with model: UserProfile) {
         tableView.isHidden = false
         // configure table models
@@ -59,13 +58,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         createTableHeader(with: model.images.first?.url)
         tableView.reloadData()
     }
-    
+
     private func createTableHeader(with urlString: String?) {
         guard let urlString = urlString,
-              let url = URL(string: urlString) else {
-                  return
-              }
-        
+              let url = URL(string: urlString)
+        else {
+            return
+        }
+
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: view.width / 1.5))
         let imageSize: CGFloat = headerView.height / 2
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: imageSize, height: imageSize))
@@ -77,7 +77,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         imageView.layer.cornerRadius = imageSize / 2
         tableView.tableHeaderView = headerView
     }
-    
+
     private func failedToGetProfile() {
         let label = UILabel(frame: .zero)
         label.text = "Failed to load profile."
@@ -86,17 +86,17 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         view.addSubview(label)
         label.center = view.center
     }
-    
+
     // MARK: - TableView
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return models.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = models[indexPath.row]
         cell.selectionStyle = .none
         return cell
     }
-    
 }

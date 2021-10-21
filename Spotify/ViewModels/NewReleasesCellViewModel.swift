@@ -13,4 +13,3 @@ struct NewReleasesCellViewModel {
     let numberOfTracks: Int
     let artistName: String
 }
-
